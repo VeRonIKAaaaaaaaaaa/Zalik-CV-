@@ -1,0 +1,247 @@
+body {
+    font-family: calibri;
+    color: #red;
+    background-image: url("graybackground.jpg");
+    background-attachment: fixed;
+}
+
+a {
+    color: #grey;
+}
+
+ul {
+    background-color: #B6BBC4;
+}
+
+li a{
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: #D8D9DA;
+    color: white;
+}
+
+.navbar{
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.side{
+    float: left;
+    background-color: #B6BBC4;
+    position: fixed;
+    width: 25%;
+    min-width: 250px;
+    min-height: 100%;
+    top: 0%;
+    left: 6%;
+}
+
+.photo{
+    height: 200px;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.main{
+    width: 60%;
+    top: 0%;
+    min-width: 600px;
+    min-height: 1080px;
+    margin-left: 450px;
+    position: absolute;
+    background-color: #D8D9DA;
+}
+
+.aboutMe{
+    margin-left: 30px;
+    border: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+
+.progress-block {
+    float: left;
+  width: 12px;
+  height: 12px;
+  margin: 2px 1px;
+  background-color: #E6E6E6;
+  border-radius: 50%;
+}
+.progress-block.active {
+    float: left;
+  background-color: #000000;
+}
+
+.label{
+    margin-bottom: 15px;
+    margin-top: 35px;
+}
+
+.navchannya{
+    margin-left: 30px;
+    margin-top: 50px;
+    border: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 25px;
+}
+
+.contact{
+    margin-left: 30px;
+    margin-top: 50px;
+    border: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 25px;
+}
+
+.logo{
+    width: 20px;
+    height: 20px;
+}
+
+.languages{
+    height: 180px;
+    margin-left: 30px;
+    margin-top: 50px;
+    border: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 25px;
+}
+
+progress {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+@property --progress-value {
+  syntax: '<integer>';
+  inherits: false;
+  initial-value: 0;
+}
+@keyframes ukrainian-progress {
+  to { --progress-value: 100; }
+}
+.prog-bar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prog-bar::before {
+  counter-reset: percentage var(--progress-value);
+  content: counter(percentage) '%';
+}
+.ukrainian { 
+  background: 
+    radial-gradient(closest-side, #F5F5F5 79%, transparent 80% 100%),
+    conic-gradient(#000000 calc(var(--progress-value) * 1%), white 0);
+  animation: ukrainian-progress 2s 1 forwards;
+}
+.ukrainian::before {
+  animation: ukrainian-progress 2s 1 forwards;
+}
+
+@keyframes eng-progress {
+  to { --progress-value: 85; }
+}
+
+.eng { 
+  background: 
+    radial-gradient(closest-side, #F5F5F5 79%, transparent 80% 100%),
+    conic-gradient(#000000 calc(var(--progress-value) * 1%), white 0);
+  animation: eng-progress 2s 1 forwards;
+}
+.eng::before {
+  animation: eng-progress 2s 1 forwards;
+}
+
+@keyframes ger-progress {
+  to { --progress-value: 60; }
+}
+
+.ger { 
+  background: 
+    radial-gradient(closest-side, #F5F5F5 79%, transparent 80% 100%),
+    conic-gradient(#000000 calc(var(--progress-value) * 1%), white 0);
+  animation: ger-progress 2s 1 forwards;
+}
+.ger::before {
+  animation: ger-progress 2s 1 forwards;
+}
+
+.progress-container{
+  margin-top: 10px;
+  width: 800px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.progress-bar1{
+  width: 60%;
+  height: 20px;
+  background-color: grey;
+}
+.progress-bar2{
+  width: 70%;
+  height: 20px;
+  background-color: grey;
+}
+.progress-bar3{
+  width: 100%;
+  height: 20px;
+  background-color: grey;
+}
+.progress-bar4{
+  width: 80%;
+  height: 20px;
+  background-color: grey;
+}
+
+.diagrammukr{
+    float: left;
+}
+
+.diagrammeng{
+    float: left;
+    margin-left: 100px;
+}
+
+.diagrammger{
+    float: left;
+    margin-left: 100px;
+}
+
+#preloader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      background: black url('loader.gif') no-repeat center center;
+}
+    
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
